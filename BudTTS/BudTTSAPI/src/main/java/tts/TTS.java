@@ -1,12 +1,6 @@
 package tts;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-
 import javax.sound.sampled.AudioFileFormat.Type;
-
-import org.apache.tomcat.util.http.fileupload.IOUtils;
 
 import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
