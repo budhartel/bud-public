@@ -3,17 +3,12 @@ package tts;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.SequenceInputStream;
 import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import javax.sound.sampled.AudioFileFormat;
-import javax.sound.sampled.AudioFileFormat.Type;
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -24,7 +19,6 @@ import com.sun.speech.freetts.util.Utilities;
 /** Streams audio to a Stream. */
 public class SingleStreamAudioPlayer implements AudioPlayer {
 	/** Logger instance. */
-	private static final Logger LOGGER = Logger.getLogger(SingleStreamAudioPlayer.class.getName());
 
 	private AudioFormat currentFormat = null;
 	private String baseName;

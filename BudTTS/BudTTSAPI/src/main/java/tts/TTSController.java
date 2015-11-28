@@ -1,8 +1,5 @@
 package tts;
 
-import java.io.ByteArrayInputStream;
-
-import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -32,8 +29,7 @@ public class TTSController {
 		rh.add("Cache-Control", "no-cache, no-store, must-revalidate");
 		rh.add("Pragma", "no-cache");
 		rh.add("Expires", "0");
-		
-		InputStreamResource isr = new InputStreamResource(tts.getOutAudio().getAudioStream());
+
 		return new ResponseEntity<byte[]>(tts.getOutAudio().getAudioBytes(),rh,HttpStatus.OK);
 
 	}
